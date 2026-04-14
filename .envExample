@@ -1,6 +1,6 @@
 PORT=3000
 JWT_SECRET=mi_clave_secreta_para_jwt
-MONGO_URI=mongodb+srv://lol2309lol:Z3a8umQraI5bAcKa@cluster0.m4w7dad.mongodb.net/?appName=Cluster0
+MONGO_URI=su uri de mongo
 MYSQL_HOST=localhost
 MYSQL_USER=root 
 MYSQL_PASSWORD=tu_contraseña_mysql
