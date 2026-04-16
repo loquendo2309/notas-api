@@ -5,7 +5,7 @@ export default class NoteController {
 
     createNote = async (req, res) => {
         const data = req.body;
-        if (req.file) data.imageurl = '/uploads/' + req.file.filename;
+        if (req.file) data.imageUrl = '/uploads/' + req.file.filename;
         data.userId = 'user_123';  //TODO:  LUEGO OBTENER EL USUARIO DE LA SESION O TOKEN
         try {
             const note = await this.noteService.createNote(data);

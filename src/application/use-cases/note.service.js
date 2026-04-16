@@ -13,7 +13,7 @@ export default class NoteService {
         return await this.noteRepository.save(note);
     }
 
-    async getNoteByUser(userId){
+    async getNotesByUserId(userId){
         return await this.noteRepository.findByUserId(userId);
     }
 }

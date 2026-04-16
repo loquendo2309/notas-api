@@ -18,7 +18,7 @@ export default class NoteMySQLRepository {
             imageUrl: noteEntity.imageUrl,
             isPrivate: noteEntity.isPrivate,
             password: noteEntity.password,
-            userId: noteEntity.userid
+            userId: noteEntity.userId
         });
         return note.toJSON();
     }
