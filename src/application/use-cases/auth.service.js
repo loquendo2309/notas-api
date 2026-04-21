@@ -1,6 +1,6 @@
 import UserEntity from "../../domain/entities/user.entity.js";
 import HashService from "../../infrastructure/security/hash.service.js";   
-import jwt from  "../../infrastructure/security/jwt.service.js";
+import JwtService from  "../../infrastructure/security/jwt.service.js";
 
 export default class AuthService {
     constructor(userRepository) {
@@ -24,7 +24,7 @@ export default class AuthService {
         const isMatch = await HashService.compare(password, user.password);
         if (!isMatch) { throw new Error("Invalid credentials"); }
 
-        const token = jwt.sign({ id: user.id, email: user.email, role: user.role });
+        const token = JwtService.generateToken({ id: user.id, email: user.email, role: user.role });
 
         return { token };
     }
