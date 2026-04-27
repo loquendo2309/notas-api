@@ -24,12 +24,12 @@ const options = {
         security: [{ bearerAuth: [] }] // Aplica seguridad globalmente (opcional)
     },
     // Le decimos a Swagger dónde buscar los comentarios para generar la documentación
-    apis: ['./src/presentation/routes/note.routes.js'], 
+    apis: ['./src/presentation/routes/*.js'], 
 };
 
 const swaggerSpec = swaggerJSDoc(options);
 
 export const setupSwagger = (app) => {
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-    console.log('📄 Documentación Swagger disponible en http://localhost:3000/api-docs');
+    console.log('Documentación Swagger disponible en http://localhost:3000/api-docs');
 };
